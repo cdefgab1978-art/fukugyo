@@ -1,135 +1,578 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>無理なく始める副収入3選</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>無理なく始める副収入3選</title>
+  <meta
+    name="description"
+    content="給料だけでは少し不安な人向けに、スマホで始めやすい副収入サービスを3つに絞って紹介しています。"
+  />
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --sub: #6b7280;
+      --line: #e5e7eb;
+      --accent: #4f46e5;
+      --accent-dark: #3730a3;
+      --soft: #eef2ff;
+      --soft-text: #3730a3;
+      --tag: #f3f4f6;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+      --max: 960px;
+    }
 
-<style>
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background: #f7f8fb;
-  color: #333;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic",
+        "Meiryo", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-h1 {
-  font-size: 28px;
-}
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-.card {
-  background: #fff;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.point-box {
-  background: #f0f4ff;
-  padding: 12px;
-  border-radius: 10px;
-  margin-top: 10px;
-  font-weight: bold;
-}
+    .container {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
 
-.btn {
-  display: block;
-  text-align: center;
-  padding: 14px;
-  background: #4f46e5;
-  color: #fff;
-  border-radius: 10px;
-  margin-top: 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-</style>
+    .hero {
+      padding: 72px 0 44px;
+      background:
+        radial-gradient(circle at top left, #eef2ff 0%, transparent 35%),
+        linear-gradient(180deg, #ffffff 0%, #f7f8fb 100%);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--soft-text);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(30px, 5vw, 46px);
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: clamp(24px, 4vw, 34px);
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--sub);
+    }
+
+    .lead {
+      font-size: 17px;
+      max-width: 720px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 52px;
+      padding: 0 18px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--text);
+      border-color: var(--line);
+    }
+
+    .btn-secondary:hover {
+      background: #fafafa;
+    }
+
+    .section {
+      padding: 56px 0;
+    }
+
+    .section-head {
+      margin-bottom: 26px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .check-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .check-item {
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .service-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .service-card {
+      padding: 24px;
+    }
+
+    .service-top-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: #ede9fe;
+      color: #5b21b6;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .service-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 16px 0 14px;
+    }
+
+    .meta-chip {
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: var(--tag);
+      color: #374151;
+    }
+
+    .point-box {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: var(--soft);
+      border-radius: 14px;
+      color: var(--soft-text);
+      font-weight: 700;
+    }
+
+    .service-actions {
+      margin-top: 18px;
+    }
+
+    .compare-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+    }
+
+    th,
+    td {
+      padding: 16px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th {
+      background: #f8fafc;
+      color: #111827;
+      font-size: 14px;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .flow {
+      display: grid;
+      gap: 16px;
+    }
+
+    .flow-item {
+      padding: 22px;
+    }
+
+    .flow-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .cta-box {
+      padding: 30px 24px;
+      text-align: center;
+    }
+
+    .cta-box p {
+      max-width: 700px;
+      margin: 0 auto 16px;
+    }
+
+    .faq {
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-item {
+      padding: 20px;
+    }
+
+    .faq-item strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    footer {
+      padding: 24px 0 56px;
+      color: var(--sub);
+      font-size: 13px;
+    }
+
+    .note {
+      line-height: 1.8;
+    }
+
+    @media (min-width: 768px) {
+      .check-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .flow {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <header class="hero">
+    <div class="container">
+      <span class="badge">初心者向け / スマホで始めやすい</span>
+      <h1>給料だけじゃ<br>ちょっと足りない人へ</h1>
+      <p class="lead">
+        副業を始めたいけど、何からやればいいかわからない。
+        そんな人向けに、スマホで始めやすいものだけを3つに絞ってまとめました。
+      </p>
 
-<div class="container">
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-primary">おすすめを見る</a>
+        <a href="#compare" class="btn btn-secondary">比較表を見る</a>
+      </div>
 
-<h1>無理なく始める副収入3選</h1>
-<p>副業を始めたいけど、何からやればいいかわからない人向けに、始めやすいサービスを3つに絞りました。</p>
+      <div class="check-list">
+        <div class="check-item">副業に興味はあるけど、難しいことは苦手</div>
+        <div class="check-item">まずは無料で気軽に始めたい</div>
+        <div class="check-item">スキマ時間でできるものがいい</div>
+        <div class="check-item">少しでも収入を増やしたい</div>
+      </div>
+    </div>
+  </header>
 
-<!-- ハピタス -->
-<div class="card">
-<h2>ハピタス</h2>
-<p>
-ネットショッピングやサービス利用でポイントが貯まる、定番のポイ活サイトです。  
-まずは副収入の感覚をつかみたい人に向いています。
-</p>
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>最初はこの3つだけでOK</h2>
+          <p>
+            いきなり難しい副業を選ぶより、まずは始めやすいものから試す方が続きやすいです。
+            それぞれ向いているタイプが違うので、自分に合うものを選んでみてください。
+          </p>
+        </div>
 
-<div class="point-box">
-こんな人におすすめ：<br>
-・とにかく簡単に始めたい<br>
-・まずは副収入を試してみたい
-</div>
+        <div id="services" class="service-grid">
+          <article class="card service-card">
+            <span class="service-top-label">👉 まずはここから（初心者向け）</span>
+            <h3>ハピタス</h3>
+            <p>
+              ネットショッピングやサービス利用でポイントが貯まる、定番のポイ活サイトです。
+              まずは副収入の感覚をつかみたい人に向いています。
+            </p>
 
-<a href="ここにA8リンク" class="btn" target="_blank">
-無料でハピタスを試してみる
-</a>
-</div>
+            <div class="service-meta">
+              <span class="meta-chip">始めやすさ：◎</span>
+              <span class="meta-chip">スマホ完結</span>
+              <span class="meta-chip">無料登録</span>
+            </div>
 
-<!-- マクロミル -->
-<div class="card">
-<h2>マクロミル</h2>
-<p>
-アンケートに答えるだけでポイントが貯まるサービスです。  
-通勤中やちょっとしたスキマ時間にコツコツ進められます。
-</p>
+            <div class="point-box">
+              こんな人におすすめ：<br>
+              ・とにかく簡単に始めたい<br>
+              ・まずは副収入を試してみたい
+            </div>
 
-<div class="point-box">
-こんな人におすすめ：<br>
-・スキマ時間を有効に使いたい<br>
-・コツコツ型の副業が向いている
-</div>
+            <div class="service-actions">
+              <!-- A8のリンクに差し替え -->
+              <a href="https://example.com/hapitas" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-primary">
+                無料でハピタスを試してみる
+              </a>
+            </div>
+          </article>
 
-<a href="ここにA8リンク" class="btn" target="_blank">
-無料でマクロミルを始める
-</a>
-</div>
+          <article class="card service-card">
+            <span class="service-top-label">👉 スキマ時間を使いたい人</span>
+            <h3>マクロミル</h3>
+            <p>
+              アンケートに答えるだけでポイントが貯まるサービスです。
+              通勤中やちょっとしたスキマ時間にコツコツ進められます。
+            </p>
 
-<!-- フルキャスト -->
-<div class="card">
-<h2>フルキャスト</h2>
-<p>
-短期・単発の仕事を探せるサービスです。  
-ポイ活やアンケートより、もう少ししっかり収入を増やしたい人向けです。
-</p>
+            <div class="service-meta">
+              <span class="meta-chip">始めやすさ：◎</span>
+              <span class="meta-chip">スキマ時間向け</span>
+              <span class="meta-chip">無料登録</span>
+            </div>
 
-<div class="point-box">
-こんな人におすすめ：<br>
-・空いた日に働いて収入を増やしたい<br>
-・副収入をしっかり作りたい
-</div>
+            <div class="point-box">
+              こんな人におすすめ：<br>
+              ・スキマ時間を有効に使いたい<br>
+              ・コツコツ型の副業が向いている
+            </div>
 
-<a href="ここにA8リンク" class="btn" target="_blank">
-無料アプリをインストールしてみる
-</a>
-</div>
+            <div class="service-actions">
+              <!-- A8のリンクに差し替え -->
+              <a href="https://example.com/macromill" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-primary">
+                無料でマクロミルを始める
+              </a>
+            </div>
+          </article>
 
-<!-- CTA -->
-<div class="card">
-<h2>迷ったらここから</h2>
-<p>
-まずは一番ハードルが低いハピタスから試してみるのがおすすめです。
-</p>
+          <article class="card service-card">
+            <span class="service-top-label">👉 しっかり稼ぎたい人</span>
+            <h3>フルキャスト</h3>
+            <p>
+              短期・単発の仕事を探せるサービスです。
+              ポイ活やアンケートより、もう少ししっかり収入を増やしたい人向けです。
+            </p>
 
-<a href="ここにハピタスリンク" class="btn" target="_blank">
-無料で試してみる
-</a>
-</div>
+            <div class="service-meta">
+              <span class="meta-chip">始めやすさ：○</span>
+              <span class="meta-chip">仕事探し向け</span>
+              <span class="meta-chip">アプリ利用</span>
+            </div>
 
-</div>
+            <div class="point-box">
+              こんな人におすすめ：<br>
+              ・空いた日に働いて収入を増やしたい<br>
+              ・副収入をしっかり作りたい
+            </div>
 
+            <div class="service-actions">
+              <!-- A8のリンクに差し替え -->
+              <a href="https://example.com/fullcast" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-primary">
+                無料アプリをインストールしてみる
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>3つの違いをざっくり比較</h2>
+          <p>迷ったら「自分の生活にいちばん合うもの」で選ぶのがおすすめです。</p>
+        </div>
+
+        <div class="compare-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>サービス</th>
+                <th>向いている人</th>
+                <th>始めやすさ</th>
+                <th>特徴</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>ハピタス</strong></td>
+                <td>まずは気軽にやってみたい人</td>
+                <td>◎</td>
+                <td>ポイ活の定番。最初の一歩として始めやすい。</td>
+              </tr>
+              <tr>
+                <td><strong>マクロミル</strong></td>
+                <td>スキマ時間を使いたい人</td>
+                <td>◎</td>
+                <td>アンケート回答中心で、少しずつ続けやすい。</td>
+              </tr>
+              <tr>
+                <td><strong>フルキャスト</strong></td>
+                <td>空いた日に働いて収入を増やしたい人</td>
+                <td>○</td>
+                <td>仕事探し系。もう少し収入を増やしたい人向け。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>迷ったらこの順番で試すのがおすすめ</h2>
+          <p>いきなり全部やるより、ひとつずつ試す方が続きやすいです。</p>
+        </div>
+
+        <div class="flow">
+          <div class="card flow-item">
+            <div class="flow-num">1</div>
+            <h3>まずはハピタス</h3>
+            <p>一番ハードルが低く、まずは副収入の入口として試しやすいです。</p>
+          </div>
+
+          <div class="card flow-item">
+            <div class="flow-num">2</div>
+            <h3>次にマクロミル</h3>
+            <p>通勤中や休憩中など、スキマ時間に少しずつ進めたい人向きです。</p>
+          </div>
+
+          <div class="card flow-item">
+            <div class="flow-num">3</div>
+            <h3>もっと増やしたいならフルキャスト</h3>
+            <p>空いた日に働いて、もう少し収入を増やしたい時の選択肢です。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card cta-box">
+          <h2>迷ったらここから</h2>
+          <p>
+            まずは一番簡単なハピタスから試してみるのがおすすめです。
+            いきなり全部始めなくても、ひとつ試すだけで感覚がつかめます。
+          </p>
+
+          <div class="hero-actions" style="justify-content: center;">
+            <!-- A8のリンクに差し替え -->
+            <a href="https://example.com/hapitas" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-primary">
+              無料で試してみる
+            </a>
+            <a href="#services" class="btn btn-secondary">3つを見比べる</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 8px;">
+      <div class="container">
+        <div class="section-head">
+          <h2>よくある質問</h2>
+        </div>
+
+        <div class="faq">
+          <div class="card faq-item">
+            <strong>本当に無料で始められますか？</strong>
+            <p>各サービスの最新条件は公式ページをご確認ください。登録や利用条件が変更される場合があります。</p>
+          </div>
+
+          <div class="card faq-item">
+            <strong>どれが一番おすすめですか？</strong>
+            <p>まずは始めやすいハピタス、スキマ時間重視ならマクロミル、もう少し収入を増やしたいならフルキャストが向いています。</p>
+          </div>
+
+          <div class="card faq-item">
+            <strong>すぐ大きく稼げますか？</strong>
+            <p>人によって差があります。まずは無理のない範囲で試して、自分に合うものを見つけるのがおすすめです。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="note">
+        ※当ページにはアフィリエイトリンクを含みます。<br>
+        ※掲載内容は作成時点の情報です。最新の内容・条件等は各公式ページにてご確認ください。<br>
+        ※本ページは特定の収益を保証するものではありません。
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
